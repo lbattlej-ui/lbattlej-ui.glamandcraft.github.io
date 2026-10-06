@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIY Studio & Nail Bar</title>
+    <style>
+        :root {
+            --primary-pink: #ff758f;
+            --pastel-pink: #ffb3c1;
+            --soft-purple: #e0aaff;
+            --dark-text: #2b2d42;
+            --light-bg: #fff0f3;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--dark-text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary-pink), var(--soft-purple));
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1.5rem 0 0 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background: white;
+            color: var(--primary-pink);
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin: 2rem 0 1rem 0;
+            color: var(--primary-pink);
+            position: relative;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img {
+            height: 200px;
+            background: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .nail-bg { background: #ffe5ec; }
+        .diy-bg { background: #e8dbfc; }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-content h3 {
+            margin-bottom: 0.5rem;
+            color: var(--dark-text);
+        }
+
+        .tag {
+            display: inline-block;
+            background: var(--pastel-pink);
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary-pink);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            transition: background 0.2s;
+        }
+
+        .btn:hover {
+            background: #ff4d6d;
+        }
+
+        /* Interactive Quiz Section */
+        .quiz-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 3rem auto;
+        }
+
+        .quiz-option {
+            display: block;
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            background: var(--light-bg);
+            border: 2px solid transparent;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .quiz-option:hover {
+            border-color: var(--primary-pink);
+            background: #ffe5ec;
+        }
+
+        footer {
+            background: var(--dark-text);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            margin-top: 4rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            nav { flex-wrap: wrap; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>✨ Glam & Craft Co. ✨</h1>
+        <p>The Ultimate DIY & Custom Nail Studio for Gen Z</p>
+        <nav>
+            <a href="#nails">Nails</a>
+            <a href="#diys">DIY Crafts</a>
+            <a href="#quiz">Style Quiz</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        
+        <!-- Nails Section -->
+        <h2 class="section-title" id="nails">💅 Trending Nail Kits</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-img nail-bg">🦄</div>
+                <div class="card-content">
+                    <span class="tag">Best Seller</span>
+                    <h3>Holographic Aura Press-Ons</h3>
+                    <p>Shimmering pastel press-on nails that shift colors in the light. Safe, reusable, and damage-free.</p>
+                    <button class="btn" onclick="orderAlert('Holographic Aura')">Get the Kit</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img nail-bg">🍒</div>
+                <div class="card-content">
+                    <span class="tag">New In</span>
+                    <h3>Y2K Cherry Gel Art Pen</h3>
+                    <p>Create flawless 3D cherry designs and retro swirls at home with our fine-tip mess-free gel pens.</p>
+                    <button class="btn" onclick="orderAlert('Y2K Cherry Gel Art Pen')">Get the Kit</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img nail-bg">☁️</div>
+                <div class="card-content">
+                    <span class="tag">Cozy Vibe</span>
+                    <h3>Vanilla Cloud Velvet Polish</h3>
+                    <p>Get that viral magnetic cat-eye velvet effect using our specialized smooth shimmer formula.</p>
+                    <button class="btn" onclick="orderAlert('Vanilla Cloud Velvet Polish')">Get the Kit</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- DIY Crafts Section -->
+        <h2 class="section-title" id="diys">🎨 Aesthetic DIYs</h2>
+        <div class="grid">
+            <div class="card">
+                <div class="card-img diy-bg">🧵</div>
+                <div class="card-content">
+                    <span class="tag">Easy DIY</span>
+                    <h3>Chunky Bead Phone Charms</h3>
+                    <p>Customize your own aesthetic tech accessories with mixed metallics, glass stars, and custom word beads.</p>
+                    <button class="btn" onclick="orderAlert('Phone Charm Kit')">Start Crafting</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img diy-bg">🕯️</div>
+                <div class="card-content">
+                    <span class="tag">Room Decor</span>
+                    <h3>Pastel Ribbon Bow Candles</h3>
+                    <p>Learn how to transform simple taper candles into viral Coquette bow masterpieces using colored wax sheets.</p>
+                    <button class="btn" onclick="orderAlert('Bow Candle Kit')">Start Crafting</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interactive Style Quiz -->
+        <h2 class="section-title" id="quiz">🔮 Find Your Aesthetic</h2>
+        <div class="quiz-box">
+            <div id="quiz-body">
+                <p style="margin-bottom: 1rem; font-weight: bold;">Pick your ideal weekend activity:</p>
+                <button class="quiz-option" onclick="showResult('Coquette Aesthetic 🎀 (Think soft pinks, bows, and pearls!)')">Baking pastries while wearing a cute matching lounge set.</button>
+                <button class="quiz-option" onclick="showResult('Y2K Grunge Aesthetic 🎸 (Think chrome nails, cyber stars, and oversized hoodies!)')">Going thrifting with friends to find vintage platform shoes.</button>
+                <button class="quiz-option" onclick="showResult('Clean Girl/Minimalist Aesthetic 🤍 (Think glazed donut nails, sleek buns, and gold jewelry!)')">Doing a skincare routine while listening to a chill lo-fi playlist.</button>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Glam & Craft Co. Made for the creators.</p>
+    </footer>
+
+    <script>
+        function orderAlert(itemName) {
+            alert("💖 Awesome choice! You selected the " + itemName + ". This is where your shopping cart or checkout page link goes!");
+        }
+
+        function showResult(aesthetic) {
+            document.getElementById('quiz-body').innerHTML = `
+                <h3 style="color: var(--primary-pink); margin-bottom: 0.5rem;">Your Aesthetic Style is:</h3>
+                <p style="font-size: 1.3rem; font-weight: bold; margin-bottom: 1rem;">${aesthetic}</p>
+                <button class="btn" onclick="resetQuiz()">Take Quiz Again</button>
+            `;
+        }
+
